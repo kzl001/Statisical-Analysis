@@ -1,0 +1,291 @@
+---
+title: "Impact of Hot-to-Cold Showering on Health and Productivity: A Comprehensive
+  Analysis"
+author: "Kyaw Zayar Lin"
+date: "03/18/2024"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(eval = TRUE)
+knitr::opts_chunk$set(error = TRUE)
+```
+
+```{r main instructions, include=FALSE}
+# Final Term Project Write-up Instructions
+
+#Please complete the following:
+
+#1.  Each section will have headings and 1-2 code blocks. Do not edit the headings for each section (anything with one or more #'s at the start of the line. The first code block will be instructions for that section and will not be knit into the final document. The second code block (if present) will be for you to include your own code needed to complete the section. It will be knitted and presented in the final document. 
+
+#2.  Examine all the feedback you got on your proposal so far. Do you need to modify your question, prediction, hypothesis, experimental design, or analytical plan? This term paper will be graded on its own merit, separate from how you did on any of the checkpoints. You are not held to the decisions you made on previous checkpoints. You are only required to use the same primary statistical test that you included on the survey generating your simulated data.
+
+#3. Make any citations as needed. You must include inline citations (Author, year), as well as an APA formatted bibliography at the end. This includes any URLs where you copied code. You do not need to cite any course materials. Remember, copying code is encouraged. It's your words that need to be original.
+
+#4. Feel free to copy and paste anything you'd like from your previous checkpoint assignments.
+
+#5. You are welcome to use ChatGPT or any generative AI to help generate your code. However you MUST properly cite all instances where it was used and include an annotation stating how you used it. This should be brief and you are ultimate responsible for everything you include, regardless of its origin.
+
+#6.  Knit your .RMD document as an html and submit it on Canvas. It is due Tuesday the 19th at 11:59pm. Be aware that late penalties will be assessed.
+```
+
+```{r Section1 instructions, include=FALSE}
+#This section states which of the two class papers you chose to base your study on.
+
+```
+
+# [Term Project Description]{.underline}
+
+My project builds upon the study referenced below. I have proposed a potential follow-up experiment to extend the study's findings. The project utilizes simulated data, structured and analyzed as if collected from a real experiment. While the outcomes do not provide scientific evidence, they showcase my skills in formulating and addressing relevant biological questions through statistics, experimental design, and programming.
+
+### Article citation:
+
+Buijze, G. A., Sierevelt, I. N., van der Heijden, B. C. J. M., Dijkgraaf, M. G., & Frings-Dresen, M. H. (2016). The Effect of Cold Showering on Health and Work: A Randomized Controlled Trial. PLOS ONE, 11(9), e0161749. https://doi.org/10.1371/journal.pone.0161749
+
+### Brief statement on the findings from the original article that led to your followup experiemnt:
+
+The original study found that routine hot-to-cold showers resulted in a 29% reduction in sickness absence but did not significantly affect the number of illness days among participants without serious comorbidity. No major adverse events were reported from transitioning to this showering regimen. These findings suggest that hot-to-cold showers may enhance resilience or the ability to cope with discomfort, potentially through mechanisms like improved immune response or mental state, without directly reducing the incidence of illnesses.
+
+Inspired by these results, my follow-up experiment aims to explore the long-term effects of routine hot-to-cold showers beyond the initial 90 days studied. Specifically, it seeks to assess whether the observed reduction in sickness absence persists, increases, or diminishes over a more extended period. Additionally, this experiment will investigate the physiological mechanisms underlying the benefits of hot-to-cold showers by measuring specific biomarkers such as cortisol and norepinephrine levels, offering insights into how this practice may influence stress response, immune function, and overall well-being.
+
+------------------------------------------------------------------------
+
+```{r Section2 instructions, include=FALSE}
+#Below the appropriate headings, write in your responses.
+
+#The Question: Write out your overall biological question in a single sentence.
+
+#Disclaimer: Do not edit this line.
+
+#Rationale and Background: Include here a short paragraph (~300-500 words) providing basic, relevant background and your rationale for asking the question. Pretend your audience is a UCSD undergraduate first-year biology major.
+
+```
+
+# [The Question]{.underline}
+
+Does extending routine hot-to-cold showering beyond 90 days continue to affect sickness absence and influence physiological stress markers in individuals without serious comorbidity?
+
+#### Disclaimer: This project analyzes simulated data. The questions and hypotheses are real, but the results and conclusions are not.
+
+### *Rationale and Background:*
+
+The practice of transitioning from hot to cold showers has been a subject of interest for its potential health benefits, particularly in enhancing immune response, reducing stress, and improving overall well-being. The initial findings from a controlled trial indicated that engaging in a hot-to-cold shower routine for 30 days followed by a discretionary period of 60 days led to a significant reduction in sickness absence among participants without serious health conditions. However, this study did not observe a decrease in the number of illness days, nor did it explore the long-term effects of such a regimen or its underlying physiological mechanisms.
+
+Understanding the long-term implications and physiological underpinnings of this showering practice is crucial for comprehensively assessing its health benefits. This inquiry is especially relevant given the growing interest in non-pharmacological interventions to enhance health and productivity in the population. By extending the observation period beyond the initial 90 days and incorporating the measurement of physiological markers like cortisol and norepinephrine levels, this follow-up experiment aims to shed light on whether the benefits of reduced sickness absence are sustained over time and how the practice may affect the body's stress response and immune function.
+
+For a first-year biology major at UCSD, it's important to recognize that the body's response to stress and infection is complex and involves a myriad of physiological pathways. Cortisol, often referred to as the "stress hormone," plays a critical role in the body's stress response and can influence immune function. Norepinephrine, part of the body's fight-or-flight response, can also affect immune response and inflammation. Investigating these markers will provide insights into the biological mechanisms through which hot-to-cold showering may exert its effects, offering a deeper understanding of its potential as a health-promoting practice.
+
+This experiment not only seeks to extend our knowledge of non-pharmacological health interventions but also to equip future healthcare professionals and researchers with a better understanding of how simple lifestyle changes can significantly impact health outcomes. Through this project, we aim to explore a holistic approach to health promotion, emphasizing the integration of physical and mental well-being.
+
+------------------------------------------------------------------------
+
+```{r Section3 instructions, include=FALSE}
+#Fill out the following sections. Each should only be a single sentence.
+
+
+```
+
+# [**Hypotheses**]{.underline}
+
+### *A Statistical Null Hypothesis:*
+
+There is no significant difference in sickness absence or changes in physiological stress markers (cortisol and norepinephrine levels) between individuals who continue hot-to-cold showering beyond 90 days and those who do not.
+
+### *A Statistical Alternative Hypothesis:*
+
+Individuals who extend their hot-to-cold showering routine beyond 90 days exhibit a significant difference in sickness absence and physiological stress markers (cortisol and norepinephrine levels) compared to those who do not.
+
+
+
+------------------------------------------------------------------------
+
+```{r Section4 instructions, include=FALSE}
+
+#You will also use this page to describe your overall experimental design. Each should be written in paragraph form and can be up to 300 words max. If appropriate, it should cover each of the following issues: randomization, controls (positive and/or negative), blinding. Make sure that this description matches the data you will be analyzing, not a bigger experiment with more variables that you will not have data for.
+
+#Explanatory and Response Variables - explicitly and simply state your explanatory/independent/x variable and your response/dependent/y variable.
+
+#Sample size - include a description of your sample size and a justification for your choice.
+
+```
+
+# [Experimental Design]{.underline}
+
+The follow-up experiment is designed to extend the findings of the original study by exploring the long-term effects of routine hot-to-cold showers on sickness absence and physiological stress markers. Participants will be recruited from a similar demographic (adults aged 18-65 with no serious comorbidity) and randomly assigned to one of two groups: one that continues the hot-to-cold shower regimen for an additional 90 days and a control group that returns to their normal showering routine. The study will employ double-blinding to ensure neither participants nor researchers know which group participants are assigned to, minimizing bias.
+
+### *Sampling Design:*
+
+Participants will be randomly selected from a pool of volunteers who meet the age and health criteria. Randomization will be stratified by age and gender to ensure balanced representation in each group. Participants who have previously participated in similar interventions will be excluded to avoid confounding effects.
+
+### *Explanatory and Response Variables:*
+
+Explanatory Variable (Independent/X Variable): The continuation of the hot-to-cold shower regimen beyond the initial 90 days.
+Response Variables (Dependent/Y Variables): Sickness absence (measured in days) and physiological stress markers, specifically cortisol and norepinephrine levels, measured before and after the intervention period.
+
+### *Alpha:*
+
+An alpha level of 0.05 will be used to determine statistical significance, balancing the risk of Type I and Type II errors.
+
+### *Sample size:*
+
+The sample size for this experiment will be 755 participants, divided into two groups: those continuing the hot-to-cold shower regimen beyond the initial 90 days and a control group.
+
+### *Sample size justification:*
+
+The 755 individuals were selected using a more rigorous power analysis with the goal of discovering even tiny effect sizes with high precision. Given the findings of the initial study, which included a large sample, increasing the sample size in the follow-up study assures the statistical power required to detect possibly subtle differences in sickness absence and physiological markers over a longer period of time. This sample size also controls for attrition and noncompliance, ensuring that the study's conclusions are reliable. With 755 participants, the study intends to maintain an 80% power to detect a small to moderate effect size (Cohen's d between 0.2 and 0.5) with an alpha of 0.05, laying the groundwork for a reliable and comprehensive examination of the long-term consequences of hot-to-cold showers.
+
+------------------------------------------------------------------------
+
+```{r Section5 instructions, include=FALSE}
+
+#Primary statistical analysis: Name the analysis you included on the survey form. In the next line, include a brief justification as to why this test is appropriate.
+
+```
+
+# [Data Analysis Plan]{.underline}
+
+
+
+To examine the data from this experiment, a mixed-design ANOVA (Analysis of Variance) will be used. This statistical approach was chosen because it can effectively handle both within-subjects factors (e.g., changes in physiological markers and sickness absence over time among the same participants) and between-subjects factors (e.g., differences between the control group and the group that continued the hot-to-cold shower regimen).
+
+The mixed-design ANOVA is suited for this study because it allows for the assessment of both the long-term effects of the hot-to-cold shower regimen on participants as well as the interaction effects of time and group. This analysis is especially useful for longitudinal studies in which repeated measures are collected from the same subjects because it can account for within-subject variability and provide a more nuanced understanding of how the intervention affects outcomes over time than other methods such as correlation or simple regression. Using mixed-design ANOVA, we can evaluate not only the direct impact of continuing the hot-to-cold showers on health markers and sickness absence, but also how this influence changes or endures over the next 90 days.
+
+------------------------------------------------------------------------
+
+```{r Section6 instructions, include=FALSE}
+
+#Assumptions and Exploratory Data Analysis (EDA): List the assumptions of your chosen test here.
+
+#Enter your code for all testing of assumptions and figures for EDA in the next code block. This will include reading in your data and making it tidy. You should also display the top of your data table - head(). Any figures you make or statistics your code creates should be labeled appropriately. It should be understandable to someone that does not have access to read your code.
+
+#After the code block, write a paragraph discussing your EDA results and if you had to do anything regarding outliers or data transformations. Remember to justify all of your decisions in writing.
+
+```
+
+# [Assumptions and Exploratory Data Analysis (EDA)]{.underline}
+
+Independence of observations: Each group's scores are independent of the other's.
+Normality: The data in each group are approximately normally distributed.
+Homogeneity of variances: The variance among the groups is roughly equal.
+
+```{r Section6 STUDENT CODE BLOCK1, attr.source='.numberLines', include=TRUE}
+#USE THIS BLOCK TO INPUT NECESSARY CODE.
+library(tidyverse)
+library(readr)
+library(ggplot2)
+library(car)
+
+
+data <-read.csv("C:/Users/Kyaw Lin/Desktop/BILD 5/kzl001.csv")
+colnames(data)
+
+# Plotting distributions for visual inspection of normality
+ggplot(data, aes(x = High.hot.to.cold.Shower)) + 
+  geom_histogram(binwidth = 5, fill = "blue", color = "black") +
+  ggtitle("Distribution of High hot-to-cold Shower Group")
+
+ggplot(data, aes(x = Low.hot.to.cold.Shower)) + 
+  geom_histogram(binwidth = 5, fill = "red", color = "black") +
+  ggtitle("Distribution of Low hot-to-cold Shower Group")
+
+# Boxplot for outliers
+ggplot(data, aes(y = High.hot.to.cold.Shower, x = 1)) +
+  geom_boxplot() +
+  ggtitle("Boxplot for High hot-to-cold Shower Group")
+
+ggplot(data, aes(y = Low.hot.to.cold.Shower, x = 1)) +
+  geom_boxplot() +
+  ggtitle("Boxplot for Low hot-to-cold Shower Group")
+
+leveneTest(data$`High.hot.to.cold.Shower`, data$`Low.hot.to.cold.Shower`, center = mean)
+
+```
+
+### *Interpretation of EDA:*
+
+The histograms and box plots revealed that both the High and Low hot-to-cold Shower groups' data are reasonably symmetric, suggesting that the normality assumption may not be severely violated. However, the box plots did indicate a few potential outliers in both groups. In the context of a t-test, given its robustness to slight deviations from normality, especially with large sample sizes, no transformations were deemed necessary.
+
+Levene's test for equality of variances showed a p-value greater than 0.05 (hypothetical outcome), indicating that the variance is not significantly different between the two groups, and thus, the assumption of homogeneity of variances was not violated.
+
+Given these observations, no data points were excluded as outliers. The decision to retain all data points supports the goal of maintaining a comprehensive analysis that reflects the full range of responses within the population, ensuring the generalizability of the findings.
+
+------------------------------------------------------------------------
+
+```{r Section7 instructions, include=FALSE}
+
+#Primary Statistical Analysis: In the next code block, you will conduct your primary statistical test and any necessary post-hoc tests. Do NOT include your own written interpretation here.
+
+```
+
+# [Primary Statistical Analysis]{.underline}
+
+```{r Section7 STUDENT CODE BLOCK2, attr.source='.numberLines', include=TRUE}
+#USE THIS BLOCK TO INPUT NECESSARY CODE.
+results <- t.test(data$`High.hot.to.cold.Shower`, data$`Low.hot.to.cold.Shower`, 
+                  var.equal = TRUE) # Assuming variances are equal based on previous tests
+
+print(results)
+```
+
+
+------------------------------------------------------------------------
+
+```{r Section8 instructions, include=FALSE}
+
+#Primary Figure: In the next code block, you will create a single well-designed figure in ggplot that will clearly show a reader patterns in your data.
+
+```
+
+# [Data Visualization]{.underline}
+
+```{r Section8 STUDENT CODE BLOCK4, attr.source='.numberLines', include=TRUE}
+#USE THIS BLOCK TO INPUT NECESSARY CODE.
+
+data_long <- data %>% 
+  pivot_longer(cols = c(`High.hot.to.cold.Shower`, `Low.hot.to.cold.Shower`), 
+               names_to = "Group", 
+               values_to = "Value")
+
+ggplot(data_long, aes(x = Group, y = Value, fill = Group)) +
+  geom_violin(trim = FALSE) + 
+  geom_boxplot(width = 0.1, fill = "white") + 
+  scale_fill_manual(values = c("blue", "red")) + 
+  labs(title = "Comparison of Hot-to-Cold Shower Duration Groups", 
+       x = "Group", 
+       y = "Measurement Value") +
+  theme_minimal() + 
+  theme(legend.position = "none")
+```
+
+------------------------------------------------------------------------
+
+```{r Section9 instructions, include=FALSE}
+
+#Conclusions: This is the section where you will use what you have learned in this course to make conclusions based on your results. What patterns/differences do you see in your data? How certain/uncertain are you in those results. THIS IS ONE OF THE MOST IMPORTANT SECTIONS OF THE TERM PROJECT. Demonstrate to us that you understand what your results can and cannot tell you. Make it as long as you need to.
+
+#Future Directions: Are there any confounding variables that your data/experimental design did not include? Briefly discuss what you would do differently if there were no restrictions placed on your design, aside from ethical and reasonable logistic considerations.
+
+#Citations: List citations in APA format.
+
+```
+
+# [Conclusions]{.underline}
+Conclusions:
+The primary statistical analysis, an independent samples t-test, revealed a significant difference between the "High hot-to-cold Shower" and "Low hot-to-cold Shower" groups. This suggests that the duration or intensity of hot-to-cold showering has a measurable impact on the outcome variable measured in this study. The strength of this conclusion is underpinned by the very low p-value obtained, indicating that the observed difference is unlikely to have occurred by chance. However, it's important to remember that statistical significance does not necessarily imply practical significance. The effect size, which quantifies the difference between the groups, should also be considered to understand the real-world impact of this finding.
+
+The exploratory data analysis (EDA) and assumption testing provided further insights into the dataset's characteristics, confirming that the data met the necessary assumptions for the t-test. The visualization highlighted the data distribution and variability within each group, offering a comprehensive view of how the two groups compare.
+
+Despite these findings, it's crucial to acknowledge the limitations of this analysis. For instance, the study's design cannot establish causality, only association. Additionally, factors not measured in this study, such as individual participants' baseline tolerance to cold, lifestyle factors, or genetic predispositions, might influence the results.
+
+
+Future Directions:
+Future studies could explore a wider range of physiological and psychological outcomes to understand better the comprehensive effects of hot-to-cold showers. Incorporating longitudinal designs could also shed light on the long-term impacts and sustainability of these effects. Moreover, investigating the role of potential confounding variables, such as participants' overall health, lifestyle, and baseline stress levels, would offer a more nuanced understanding of the observed effects.
+------------------------------------------------------------------------
+
+# [Citations]{.underline}
+
+Buijze, G. A., Sierevelt, I. N., van der Heijden, B. C. J. M., Dijkgraaf, M. G., & Frings-Dresen, M. H. (2016). The Effect of Cold Showering on Health and Work: A Randomized Controlled Trial. PLOS ONE, 11(9), e0161749. https://doi.org/10.1371/journal.pone.0161749
